@@ -1,0 +1,32 @@
+interface Shape{
+	double PI = 3.14;
+	abstract double area();
+}
+class Reactangle implements Shape{
+	private double width;
+	private double length;
+	public Reactangle(double width,double length){
+		this.width = width;
+		this.length = length;
+	}
+	public double area(){
+	return width * length ;    
+	}
+}
+class Circle implements Shape{
+	private double radius;
+	public Circle(double radius){
+		this.radius = radius;
+	}
+	public double area(){
+		return PI * radius * radius;
+	}
+}
+class Test{
+	public static void main(String[] args) {
+		Reactangle r = new Reactangle(3,4);
+		Circle c = new Circle(3);
+		System.out.println("矩形面积:"+ r.area());
+		System.out.println("圆形面积:"+ c.area());
+	}
+}
