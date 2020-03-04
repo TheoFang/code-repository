@@ -1,0 +1,23 @@
+public class jieCheng{
+	public static void main(String[] args) {
+		jieCheng j = new jieCheng();
+		long sum = 0;
+		sum = j.sumJieCheng(7);
+		System.out.println(sum);
+	}
+	long sumJieCheng(int n){
+		long result = 1;
+		long sum = 0;
+		int m = n;
+		while(m > 0){
+			for(int i = 1;i<=n;i++){
+				result *= i;
+			}
+			sum += result;
+			n--;
+			m--;
+			result = 1;
+		}
+		return sum;
+	}
+}
